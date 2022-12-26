@@ -9,7 +9,7 @@ const rootReducer = combineReducers({
   authReducer,
 });
 
-const persistConfig: any = {
+const persistConfig = {
   key: "root",
   storage,
 };

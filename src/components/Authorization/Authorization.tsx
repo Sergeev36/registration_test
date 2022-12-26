@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../../Images/LiveDune.svg";
 import MobileLogo from "../../Images/LiveDune-mobile.svg";
 import fbImg from "../../Images/fb.svg";
@@ -30,10 +30,10 @@ import {
 } from "../styles";
 import { Title, RestoreButton } from "./styles";
 
-
 const Authorization = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const [userError, setUserError] = useState("");
   const users = useSelector(
     (state: { usersReducer: { users: IUser[] } }) => state.usersReducer.users
   );
@@ -62,16 +62,21 @@ const Authorization = () => {
     onSubmit: (values) => {
       const user = users.find(
         (user) =>
-          user.email === values.email && user.password === values.password
+          user.email.toLowerCase() === values.email.toLowerCase() &&
+          user.password === values.password
       );
       if (user) {
         dispatch(userAuth(user));
         navigate("/confirm");
       } else {
-        console.log("not this user!");
+        setUserError("Указанная учетная запись не существует");
       }
     },
   });
+
+  const handleResetError = () => {
+    userError && setUserError("")
+  }
 
   return (
     <Wrapper>
@@ -109,6 +114,7 @@ const Authorization = () => {
             border={formik.errors.email && "1px solid #FB2424"}
             onChange={formik.handleChange}
             value={formik.values.email}
+            onClick={handleResetError}
           />
           {formik.errors.email && formik.touched.email && (
             <ErrorForm>{formik.errors.email}</ErrorForm>
@@ -117,14 +123,16 @@ const Authorization = () => {
             name="password"
             type="password"
             placeholder="Пароль"
-            autoComplete="true"
+            autoComplete="false"
             border={formik.errors.email && "1px solid #FB2424"}
             onChange={formik.handleChange}
             value={formik.values.password}
+            onClick={handleResetError}
           />
           {formik.errors.password && formik.touched.password && (
             <ErrorForm>{formik.errors.password}</ErrorForm>
           )}
+          {userError && <ErrorForm>{userError}</ErrorForm>}
         </InputContainer>
         <ButtonsContainer>
           <FormButton>Войти в аккаунт</FormButton>

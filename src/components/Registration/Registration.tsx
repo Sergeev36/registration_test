@@ -70,7 +70,9 @@ const Registration = () => {
     validationSchema,
     onSubmit: (values) => {
       setEmailError("");
-      const user = users.find((user) => user.email === values.email);
+      const user = users.find(
+        (user) => user.email.toLowerCase() === values.email.toLowerCase()
+      );
       if (user) {
         setEmailError("Пользователь с таким e-mail уже зарегистрирован");
       } else {
@@ -81,6 +83,14 @@ const Registration = () => {
       }
     },
   });
+
+  const handleResetError = () => {
+    emailError && setEmailError("");
+  };
+
+  const handleSetPromo = () => {
+    setPromo(true);
+  };
 
   return (
     <Wrapper>
@@ -130,8 +140,8 @@ const Registration = () => {
             placeholder="Email"
             border={(emailError || formik.errors.email) && "1px solid #FB2424"}
             onChange={formik.handleChange}
-            onBlur={() => setEmailError("")}
             value={formik.values.email}
+            onClick={handleResetError}
           />
           {formik.errors.email && formik.touched.email && (
             <ErrorForm>{formik.errors.email}</ErrorForm>
@@ -140,7 +150,7 @@ const Registration = () => {
           <Input
             name="password"
             type="password"
-            autoComplete="true"
+            autoComplete="false"
             placeholder="Пароль"
             border={formik.errors.password && "1px solid #FB2424"}
             onChange={formik.handleChange}
@@ -159,9 +169,7 @@ const Registration = () => {
               value={formik.values.promo}
             />
           ) : (
-            <PromoText onClick={() => setPromo(true)}>
-              У меня есть промокод
-            </PromoText>
+            <PromoText onClick={handleSetPromo}>У меня есть промокод</PromoText>
           )}
         </InputContainer>
         <ButtonsContainer>
