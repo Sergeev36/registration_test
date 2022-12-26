@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/registration_test/static/css/main.d08c9682.css",
-    "main.js": "/registration_test/static/js/main.d9e56e97.js",
+    "main.js": "/registration_test/static/js/main.0226c90b.js",
     "static/js/787.6420d87a.chunk.js": "/registration_test/static/js/787.6420d87a.chunk.js",
     "static/media/LiveDune-mobile.svg": "/registration_test/static/media/LiveDune-mobile.cff1a63128c47f00a44c650221039727.svg",
     "static/media/LiveDune.svg": "/registration_test/static/media/LiveDune.fb08081847d1f265dda1e9b6f243cdaa.svg",
@@ -11,11 +11,11 @@
     "index.html": "/registration_test/index.html",
     "static/media/lock.svg": "/registration_test/static/media/lock.525cd4fc8210a0f0a7b88c310fb88583.svg",
     "main.d08c9682.css.map": "/registration_test/static/css/main.d08c9682.css.map",
-    "main.d9e56e97.js.map": "/registration_test/static/js/main.d9e56e97.js.map",
+    "main.0226c90b.js.map": "/registration_test/static/js/main.0226c90b.js.map",
     "787.6420d87a.chunk.js.map": "/registration_test/static/js/787.6420d87a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d08c9682.css",
-    "static/js/main.d9e56e97.js"
+    "static/js/main.0226c90b.js"
   ]
 }
