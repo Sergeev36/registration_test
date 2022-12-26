@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.d08c9682.css",
-    "main.js": "/static/js/main.4472fe2c.js",
-    "static/js/787.6420d87a.chunk.js": "/static/js/787.6420d87a.chunk.js",
-    "static/media/LiveDune-mobile.svg": "/static/media/LiveDune-mobile.cff1a63128c47f00a44c650221039727.svg",
-    "static/media/LiveDune.svg": "/static/media/LiveDune.fb08081847d1f265dda1e9b6f243cdaa.svg",
-    "static/media/letter.svg": "/static/media/letter.be53375ec38e99b889af7a9310011b58.svg",
-    "static/media/google.svg": "/static/media/google.1011a862388e7bf4efac0fd2667f69a8.svg",
-    "static/media/fb.svg": "/static/media/fb.283e3bd28ea290d919c63e49b9fcaab6.svg",
-    "index.html": "/index.html",
-    "static/media/lock.svg": "/static/media/lock.525cd4fc8210a0f0a7b88c310fb88583.svg",
-    "main.d08c9682.css.map": "/static/css/main.d08c9682.css.map",
-    "main.4472fe2c.js.map": "/static/js/main.4472fe2c.js.map",
-    "787.6420d87a.chunk.js.map": "/static/js/787.6420d87a.chunk.js.map"
+    "main.css": "/registration_test/static/css/main.d08c9682.css",
+    "main.js": "/registration_test/static/js/main.ddc4c355.js",
+    "static/js/787.6420d87a.chunk.js": "/registration_test/static/js/787.6420d87a.chunk.js",
+    "static/media/LiveDune-mobile.svg": "/registration_test/static/media/LiveDune-mobile.cff1a63128c47f00a44c650221039727.svg",
+    "static/media/LiveDune.svg": "/registration_test/static/media/LiveDune.fb08081847d1f265dda1e9b6f243cdaa.svg",
+    "static/media/letter.svg": "/registration_test/static/media/letter.be53375ec38e99b889af7a9310011b58.svg",
+    "static/media/google.svg": "/registration_test/static/media/google.1011a862388e7bf4efac0fd2667f69a8.svg",
+    "static/media/fb.svg": "/registration_test/static/media/fb.283e3bd28ea290d919c63e49b9fcaab6.svg",
+    "index.html": "/registration_test/index.html",
+    "static/media/lock.svg": "/registration_test/static/media/lock.525cd4fc8210a0f0a7b88c310fb88583.svg",
+    "main.d08c9682.css.map": "/registration_test/static/css/main.d08c9682.css.map",
+    "main.ddc4c355.js.map": "/registration_test/static/js/main.ddc4c355.js.map",
+    "787.6420d87a.chunk.js.map": "/registration_test/static/js/787.6420d87a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d08c9682.css",
-    "static/js/main.4472fe2c.js"
+    "static/js/main.ddc4c355.js"
   ]
 }
